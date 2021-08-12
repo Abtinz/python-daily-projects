@@ -1,0 +1,44 @@
+def Sum(num1,num2) :
+         print(f"a + b ={num1+num2}") 
+
+def Minus(num1,num2) :
+        print(f"a - b ={num1-num2}") 
+
+def multiplication(num1,num2) :
+         print(f"a * b ={num1*num2}")  
+
+def Division(num1,num2) :
+        print(f"a / b ={num1/num2}")  
+   
+def Percentage(num1,num2) :
+        print(f"a % b ={num1%num2}") 
+
+def main_menu() :
+    print("please enter first number :")
+    num1=int(input())
+    print("please enter second number :")
+    num2=int(input())
+    print("1) Sum(num1,num2)") 
+    print("2) Minus(num1,num2)") 
+    print("3) Multiplication(num1,num2)") 
+    print("4) Division(num1,num2)") 
+    print("5) Percentage(num1,num2)") 
+    print("else : All available operators(num1,num2)") 
+    choice = int(input())
+    if choice == 1 :
+        Sum(num1,num2)
+    elif choice ==  2 :
+        Minus(num1,num2)
+    elif choice ==  3 :
+        multiplication(num1,num2)
+    elif choice ==  4 :
+        Division(num1,num2)
+    elif choice ==  5 :
+        Percentage(num1,num2)
+    else :
+        Sum(num1,num2)
+        Minus(num1,num2)
+        multiplication(num1,num2)
+        Division(num1,num2)
+        Percentage(num1,num2)
+main_menu()
