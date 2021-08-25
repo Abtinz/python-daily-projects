@@ -9,6 +9,7 @@ while 1 ==1 :
      digits_sum+=digit**3
      tempNumber//=10
    if number == digits_sum : 
+      print("----------------------------------------------")
       i=0
       while i < len(digits) :
           if i == len(digits) - 1 : print("("+str(digits[i]**3)+") ^ 3")
@@ -21,7 +22,9 @@ while 1 ==1 :
           i-=-1
     
       print("number "+str(number)+" is an Armstrong number")
+      print("----------------------------------------------")
    else : 
+      print("----------------------------------------------")
       i=0
       while i < len(digits) :
          if i == len(digits) - 1 : print("("+str(digits[i]**3)+") ^ 3")
@@ -32,8 +35,9 @@ while 1 ==1 :
          if i == len(digits) - 1 : print("("+str(digits[i])+") = "+str(digits_sum))
          else : print("("+str(digits[i]**3) + ") + ",end=" " )
          i-=-1
-         print(str(digits_sum)+" != "+str(number))
+      print(str(digits_sum)+" != "+str(number))
       print("number "+str(number)+" isnt an Armstrong number")
+      print("----------------------------------------------")
    print("1) new number")
    print("press any key to exit")
    choice = input()
