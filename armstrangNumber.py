@@ -1,5 +1,5 @@
 while 1 ==1 :
-   number = int(input("please enter your   Integer number :"))
+   number = int(input("please enter your   Integer number : "))
    digits_sum=0
    tempNumber=number
    digits=[]
