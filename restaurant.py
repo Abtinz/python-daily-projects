@@ -82,20 +82,6 @@ def main() :
             break
         else : print("ERROR !")
 
-def CustomerFunc(name,lastname,phoneNumber,addres,role) :
-    order = input('Oreder name :')
-    taking = 0
-    while 1 == 1 :
-      print("will you serve your order in our restaurant ? \n1)yes\netc)no")
-      choice = input()
-      if choice == "1" : 
-            taking = 1
-            break
-      elif choice == "2" : 
-            taking = 0
-      person = Customer(name, lastname, addres, phoneNumber, role,order,taking)  
-      person.printCustomer()
-    
 
 def CustomerFunc(name,lastname,phoneNumber,addres,role) :
     order = input('Oreder name :')
