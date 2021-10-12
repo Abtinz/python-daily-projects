@@ -24,4 +24,3 @@ print(lastname.casefold())
 print(txt.count(" "))
 print(txt.find("abtin"))
 print(txt.index("ab"))
-
