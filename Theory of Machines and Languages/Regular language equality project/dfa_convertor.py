@@ -50,6 +50,7 @@ class DFAConverter:
         }
 
     def DFA_Information(self):
+        print("#DFA conversion------------------------------------------------------------------------------------")
         print(f"DFA Start State: {self.dfa_start_state}")
         print(f"DFA States: {self.dfa_states}")
         print(f"DFA Transitions: {self.dfa_transitions}")

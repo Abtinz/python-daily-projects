@@ -5,6 +5,13 @@ class EqualChecker:
         self.complement_dfa1 = self.complement(dfa1)
         self.complement_dfa2 = self.complement(dfa2)
 
+    def information(self):
+        print(f"# Equality check------------------------------------------------------------------------------------")
+        print(f"\nfirst dfa:{self.dfa1}")
+        print(f"\nsecond dfa:{self.dfa2}")
+        print(f"\nfirst dfa complement:{self.complement_dfa1}")
+        print(f"\nsecond dfa complement:{self.complement_dfa2}")
+
     def complement(self, dfa):
         new_final_states = set(dfa['states']) - set(dfa['final_states'])
         return {
@@ -42,6 +49,7 @@ class EqualChecker:
         }
 
     def check_equal(self):
+        self.information()
         intersection1 = self.product_automaton(self.dfa1, self.complement_dfa2, True)
         intersection2 = self.product_automaton(self.dfa2, self.complement_dfa1, True)
         union_dfa = self.product_automaton(intersection1, intersection2, False)

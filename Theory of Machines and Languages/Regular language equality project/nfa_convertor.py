@@ -11,6 +11,7 @@ class NFAConvertor:
         self.nfa = self.convert()
 
     def NFA_Information(self):
+        print("###NFA conversion------------------------------------------------------------------------------------")
         print(f'given data: variables:{self.variables}\n terminals:{self.terminals}\n productions:{self.p}\n start_variable:{self.start_variable}\n')
         print(f'results: final_states:{self.final_states}\n transitions:{self.transitions}\n')
 
@@ -22,8 +23,6 @@ class NFAConvertor:
         if self.transitions != None:
             for variable, rules in self.p.items():
                 for rule in rules:
-                    print(f"Processing rule: {variable} -> {rule}")
-
                     if len(rule) == 1:
                         char = rule[0]
                         if char not in self.transitions[variable]:
@@ -37,5 +36,3 @@ class NFAConvertor:
                             self.transitions[variable][char] = set()
                         self.transitions[variable][char].add(next_state)
         self.NFA_Information()
-
-        
